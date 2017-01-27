@@ -1,0 +1,204 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: 'HelveticaNeue','Helvetica', 'Roboto', sans-serif;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.main {
+	height: 100%;
+}
+
+.side_panel {
+	background-color: #1D2F3E;
+	text-align: center;
+	color: white;
+	height: 100%;
+}
+
+.header {
+	text-align: center;
+	font-size: 3.5em;
+	height: 30%;
+	cursor: pointer;
+}
+
+.middle {
+	height: 40%;
+}
+
+.links {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 35%;
+	margin: auto;
+/*	display: none;*/
+}
+
+.about_link, .skills_link, .projects_link {
+/*	border: 0.1em solid #555555;*/
+	font-size: 1.5em;
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.5em 0;
+	cursor: pointer;
+}
+
+.highlight {
+	background-color: white;
+	color: #1D2F3E;
+}
+
+.about_link:hover, .skills_link:hover, .projects_link:hover {
+	background-color: white;
+	color: #1D2F3E;
+}
+
+.footer {
+	height: 30%;
+	font-size: 1.5em;
+}
+
+.social_links a {
+	color: white;
+}
+
+.social_links i {
+	font-size: 2em;
+	margin: 0.25em;
+}
+
+
+.hero {
+	height: 100%;
+	text-align: center;
+}
+
+
+.hero_headline {
+	font-size: 2.5em;
+	text-align: center;
+}
+
+.header_first, .header_second, .header_third {
+	display: none;
+}
+
+
+.hero_content {
+
+}
+
+
+.about_link_content {
+	margin-top: 12.5em;
+	text-align: left;
+}
+
+
+
+
+.skills_link_content {
+	margin-top: 5em;
+	text-align: left;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+
+
+.projects_link_content {
+	margin-top: 1em;
+	padding-left: 3em;
+	text-align: left;
+	height: 90%;
+	overflow: auto;
+	max-height: 100vh 
+}
+
+.project {
+	margin: 2em 0 2em 0;
+}
+
+.project_info {
+	height: 100%;
+}
+
+.project_info_header {
+	font-size: 2em;
+}
+
+.project_info_link {
+	float: left;
+	margin: 1em;
+}
+
+.project_image {
+	height: 100%;
+}
+
+/*.project_image_gigplay {
+	height: 20em;
+	background-image: url('/images/GigPlay_Main.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+*/
+/*.project_image_gigplay:hover {
+	background-image: url('/images/GigPlay_Main.png');
+}*/
+
+img {
+	box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	margin: auto;
+}
+
+
+.templates {
+	display: none;
+}
+
+
+
+.verticalCenter {
+	position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
