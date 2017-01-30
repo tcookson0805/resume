@@ -19,9 +19,9 @@ html, body {
 	height: 100%;
 }
 
-.header {
+.header_side {
 	text-align: center;
-	font-size: 3.5em;
+	font-size: 4.5em;
 	height: 30%;
 	cursor: pointer;
 }
@@ -93,24 +93,40 @@ html, body {
 	display: none;
 }
 
+.header_second {
+	text-align: center;
+	font-size: 2em;
+	height: 30%;
+	cursor: pointer;
+}
 
-.hero_content {
-
+.header_third {
+	margin-top: 2em;
+	font-size: 1em;
 }
 
 
+
 .about_link_content {
-	margin-top: 12.5em;
+	font-size: 1.25em;
+	margin-left: 5em;
+	margin-right: 5em;
 	text-align: left;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 
 .skills_link_content {
-	margin-top: 12em;
+	font-size: 1.25em;
 	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 5em;
+	margin-right: 5em;
 	text-align: left;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .skills_link_content .row {
@@ -150,12 +166,16 @@ ul {
 
 .project_info_tech {
 	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0.5em;
-	text-align: center
+	margin: 1em auto;
+	text-align: center;
+	background-color: #1D2F3E;
+	color: white;
 }
 
+.project_info_description {
+	width: 80%;
+	margin: 1em auto;
+}
 
 .project_info_links {
 	width: 80%;
@@ -170,8 +190,6 @@ ul {
 	vertical-align: text-bottom;
 }
 
-
-
 .project_link {
 	width: 50%;
 	float: left;
@@ -179,6 +197,7 @@ ul {
 
 .project_image {
 	height: 100%;
+	margin-bottom: 2em;
 }
 
 img {
@@ -192,7 +211,6 @@ img {
 .templates {
 	display: none;
 }
-
 
 
 .verticalCenter {
