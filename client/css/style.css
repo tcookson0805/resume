@@ -1,0 +1,126 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "HelveticaNeue", "Helvetica", "Roboto", sans-serif; }
+
+.full-height {
+  height: 100%; }
+
+.side_panel {
+  background-color: #1D2F3E;
+  text-align: center;
+  color: white;
+  height: 100%; }
+  .side_panel .side_panel_content {
+    margin-top: 4em; }
+    .side_panel .side_panel_content .side_panel_header {
+      font-weight: bold;
+      font-size: 2em; }
+    .side_panel .side_panel_content .side_panel_links {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.5em; }
+      .side_panel .side_panel_content .side_panel_links a {
+        color: white; }
+        .side_panel .side_panel_content .side_panel_links a:hover {
+          color: white; }
+
+.hero {
+  height: 100%;
+  overflow-y: scroll;
+  position: relative; }
+
+#main {
+  text-align: center;
+  height: 100%; }
+  #main .main_content {
+    position: relative;
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    transform: translateY(-30%); }
+    #main .main_content .main_header {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      font-size: 5em;
+      color: #1D2F3E; }
+    #main .main_content .main_middle {
+      font-size: 2em; }
+    #main .main_content .main_links a {
+      font-size: 3em;
+      color: black;
+      margin: 0.5em;
+      text-decoration: none; }
+
+#main::after {
+  content: "";
+  background: url("../images/hexagon_pattern.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  border-bottom: 0.1em solid black; }
+
+#aboutMe {
+  padding-top: 3em; }
+  #aboutMe .aboutMe_header {
+    font-size: 3em;
+    font-weight: bold;
+    color: #1D2F3E; }
+  #aboutMe .aboutMe_right {
+    text-align: center; }
+    #aboutMe .aboutMe_right .aboutMe_right_header {
+      font-weight: bold; }
+
+#projects {
+  padding-top: 3em; }
+  #projects .projects_header {
+    font-weight: bold;
+    font-size: 3em;
+    margin: 0.5em auto; }
+  #projects .project {
+    margin-bottom: 3em; }
+    #projects .project .project_title {
+      font-weight: bold;
+      font-size: 2em; }
+    #projects .project .project_info {
+      font-family: "Libre Baskerville", serif;
+      margin: 1em auto; }
+    #projects .project .project_links {
+      margin: 1em auto; }
+      #projects .project .project_links .project_link {
+        background-color: #1D2F3E;
+        text-align: center;
+        color: white;
+        float: left;
+        padding: 0.5em;
+        border: 0.1em solid black;
+        margin-right: 0.5em;
+        width: 6em; }
+    #projects .project .project_image img {
+      border: 0.1em solid black;
+      width: 100%;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+
+#contact {
+  margin-bottom: 3em; }
+  #contact .contact_header {
+    font-weight: bold;
+    font-size: 3em;
+    margin: 0.5em auto; }
+  #contact .contact_info {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold; }
+
+/*# sourceMappingURL=style.css.map */

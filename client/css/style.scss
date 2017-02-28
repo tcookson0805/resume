@@ -1,0 +1,201 @@
+
+$mainFont: 'HelveticaNeue','Helvetica', 'Roboto', sans-serif;
+$secondFont: 'Libre Baskerville', serif;
+
+
+@mixin links {
+	a {
+		color: white;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: $mainFont
+}
+
+
+.full-height {
+	height: 100%;
+}
+
+.side_panel {
+	background-color: #1D2F3E;
+	text-align: center;
+	color: white;
+	height: 100%;
+
+	.side_panel_content {
+		margin-top: 4em;
+
+		.side_panel_header {
+			font-weight: bold;
+			font-size: 2em;
+		}
+
+		.side_panel_links {
+			font-family: $secondFont;
+			font-size: 1.5em;
+			@include links;
+		}
+	}
+}
+
+.hero {
+	height: 100%;
+	overflow-y: scroll;
+	position: relative;
+}
+
+#main {
+	text-align: center;
+	height: 100%;
+	
+	.main_content {
+		position: relative;
+		top: 30%;
+		-webkit-transform: translateY(-30%);
+		-ms-transform: translateY(-30%);
+		transform: translateY(-30%);
+
+		.main_header {
+			font-weight: bold;
+			margin-bottom: 0.5em;
+			font-size: 5em;
+			color: #1D2F3E;
+		}
+		.main_middle {
+			font-size: 2em;
+		}
+		.main_links a {
+			font-size: 3em;
+			color: black;
+			margin: 0.5em;
+			text-decoration: none;
+		}
+	}
+}
+
+#main::after {
+	content: "";
+	background: url('../images/hexagon_pattern.jpg') no-repeat center center; //Created by Eightonesix - Freepik.com
+	background-size:cover;
+	height: 100%;
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;  
+	-webkit-filter: grayscale(1); 
+	filter: grayscale(1);
+	border-bottom: 0.1em solid black;
+}
+
+#aboutMe {
+	padding-top: 3em;
+	.aboutMe_header {
+		font-size: 3em;
+		font-weight: bold;
+		color: #1D2F3E;
+	}
+	.aboutMe_left {
+
+	}
+	.aboutMe_right {
+		text-align: center;
+		.aboutMe_right_header {
+			font-weight: bold
+		}
+	}
+}
+
+#projects {
+	padding-top: 3em;
+	.projects_header{
+		font-weight: bold;
+		font-size: 3em;
+		margin: 0.5em auto;
+	}
+	.project {
+		margin-bottom: 3em;
+		.project_title {
+			font-weight: bold;
+			font-size: 2em;
+		}
+		.project_info {
+			font-family: $secondFont;
+			margin: 1em auto;
+		}
+		.project_links {
+			margin: 1em auto;
+			.project_link {
+				background-color: #1D2F3E;
+				text-align: center;
+				color: white; 
+				float: left;
+				padding: 0.5em;
+				border: 0.1em solid black;
+				margin-right: 0.5em;
+				width: 6em;
+			}
+		}
+		.project_image  {
+			img {
+				border: 0.1em solid black;
+				width: 100%;
+				position: relative;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+		}	
+	}
+}
+
+#contact {
+	margin-bottom: 3em;
+	.contact_header {
+		font-weight: bold;
+		font-size: 3em;
+		margin: 0.5em auto;
+	}
+	.contact_info {
+		text-align: center;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

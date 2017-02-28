@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	$('body').scrollspy({ target: '#side_panel_links' })
+
+
 	var header = $('.hero_headline').clone();
 	var about = $('.about_link_content').clone();
 	var skills = $('.skills_link_content').clone();
