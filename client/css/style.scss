@@ -13,31 +13,26 @@ $secondFont: 'Libre Baskerville', serif;
 }
 
 html, body {
-	height: 100%;
+
 	margin: 0;
 	font-family: $mainFont
 }
 
-
-.full-height {
-	height: 100%;
-}
-
-.side_panel {
+#menu {
 	background-color: #1D2F3E;
 	text-align: center;
 	color: white;
-	height: 100%;
 
-	.side_panel_content {
-		margin-top: 4em;
+	.menu_content {
+		margin: 4em auto;
+		position: fixed;
 
-		.side_panel_header {
+		.menu_header {
 			font-weight: bold;
 			font-size: 2em;
 		}
 
-		.side_panel_links {
+		#menu_links {
 			font-family: $secondFont;
 			font-size: 1.5em;
 			@include links;
@@ -45,16 +40,15 @@ html, body {
 	}
 }
 
-.hero {
-	height: 100%;
+#hero {
 	overflow-y: scroll;
 	position: relative;
 }
 
 #main {
 	text-align: center;
-	height: 100%;
-	
+	overflow: auto;
+	height: 100vh;
 	.main_content {
 		position: relative;
 		top: 30%;
@@ -84,7 +78,7 @@ html, body {
 	content: "";
 	background: url('../images/hexagon_pattern.jpg') no-repeat center center; //Created by Eightonesix - Freepik.com
 	background-size:cover;
-	height: 100%;
+	height: 100vh;
 	opacity: 0.3;
 	top: 0;
 	left: 0;
@@ -98,11 +92,12 @@ html, body {
 }
 
 #aboutMe {
-	padding-top: 3em;
+	padding-top: 3rem;
 	.aboutMe_header {
 		font-size: 3em;
 		font-weight: bold;
 		color: #1D2F3E;
+		margin-bottom: 1em
 	}
 	.aboutMe_left {
 
@@ -123,7 +118,7 @@ html, body {
 		margin: 0.5em auto;
 	}
 	.project {
-		margin-bottom: 3em;
+		margin-bottom: 5em;
 		.project_title {
 			font-weight: bold;
 			font-size: 2em;
@@ -147,13 +142,13 @@ html, body {
 		}
 		.project_image  {
 			img {
-				border: 0.1em solid black;
-				width: 100%;
+				border: 0.2em solid #979797;
+				max-width: 100%;
 				position: relative;
-				top: 50%;
-				-webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				transform: translateY(-50%);
+				// top: 50%;
+				// -webkit-transform: translateY(-50%);
+				// -ms-transform: translateY(-50%);
+				// transform: translateY(-50%);
 			}
 		}	
 	}
@@ -167,12 +162,27 @@ html, body {
 		margin: 0.5em auto;
 	}
 	.contact_info {
-		text-align: center;
-		font-size: 1.5em;
-		font-weight: bold;
+		font-size: 1em;
 	}
 }
 
+
+.form {
+	display: block;
+	margin-top: 0em;
+	.form_div {
+		position: relative;
+		max-height: 150px;
+		margin-bottom: 1.25em;
+		.form_input {
+			width: 100%;
+		}
+		.form_textarea {
+			width: 100%;
+			height: 10em;
+		}
+	}
+}
 
 
 

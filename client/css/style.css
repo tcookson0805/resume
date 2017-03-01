@@ -1,37 +1,33 @@
 html, body {
-  height: 100%;
   margin: 0;
   font-family: "HelveticaNeue", "Helvetica", "Roboto", sans-serif; }
 
-.full-height {
-  height: 100%; }
-
-.side_panel {
+#menu {
   background-color: #1D2F3E;
   text-align: center;
-  color: white;
-  height: 100%; }
-  .side_panel .side_panel_content {
-    margin-top: 4em; }
-    .side_panel .side_panel_content .side_panel_header {
+  color: white; }
+  #menu .menu_content {
+    margin: 4em auto;
+    position: fixed; }
+    #menu .menu_content .menu_header {
       font-weight: bold;
       font-size: 2em; }
-    .side_panel .side_panel_content .side_panel_links {
+    #menu .menu_content #menu_links {
       font-family: "Libre Baskerville", serif;
       font-size: 1.5em; }
-      .side_panel .side_panel_content .side_panel_links a {
+      #menu .menu_content #menu_links a {
         color: white; }
-        .side_panel .side_panel_content .side_panel_links a:hover {
+        #menu .menu_content #menu_links a:hover {
           color: white; }
 
-.hero {
-  height: 100%;
+#hero {
   overflow-y: scroll;
   position: relative; }
 
 #main {
   text-align: center;
-  height: 100%; }
+  overflow: auto;
+  height: 100vh; }
   #main .main_content {
     position: relative;
     top: 30%;
@@ -55,7 +51,7 @@ html, body {
   content: "";
   background: url("../images/hexagon_pattern.jpg") no-repeat center center;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   opacity: 0.3;
   top: 0;
   left: 0;
@@ -68,11 +64,12 @@ html, body {
   border-bottom: 0.1em solid black; }
 
 #aboutMe {
-  padding-top: 3em; }
+  padding-top: 3rem; }
   #aboutMe .aboutMe_header {
     font-size: 3em;
     font-weight: bold;
-    color: #1D2F3E; }
+    color: #1D2F3E;
+    margin-bottom: 1em; }
   #aboutMe .aboutMe_right {
     text-align: center; }
     #aboutMe .aboutMe_right .aboutMe_right_header {
@@ -85,7 +82,7 @@ html, body {
     font-size: 3em;
     margin: 0.5em auto; }
   #projects .project {
-    margin-bottom: 3em; }
+    margin-bottom: 5em; }
     #projects .project .project_title {
       font-weight: bold;
       font-size: 2em; }
@@ -104,13 +101,9 @@ html, body {
         margin-right: 0.5em;
         width: 6em; }
     #projects .project .project_image img {
-      border: 0.1em solid black;
-      width: 100%;
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
+      border: 0.2em solid #979797;
+      max-width: 100%;
+      position: relative; }
 
 #contact {
   margin-bottom: 3em; }
@@ -119,8 +112,19 @@ html, body {
     font-size: 3em;
     margin: 0.5em auto; }
   #contact .contact_info {
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold; }
+    font-size: 1em; }
+
+.form {
+  display: block;
+  margin-top: 0em; }
+  .form .form_div {
+    position: relative;
+    max-height: 150px;
+    margin-bottom: 1.25em; }
+    .form .form_div .form_input {
+      width: 100%; }
+    .form .form_div .form_textarea {
+      width: 100%;
+      height: 10em; }
 
 /*# sourceMappingURL=style.css.map */

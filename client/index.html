@@ -9,35 +9,36 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	
-<!-- 	<link rel="stylesheet" href="css/main.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 	
+	<div class="container-fluid">
+		<div class="row">
 
-	<div class="container-fluid full-height">
-		<div class="row full-height">
-
-			<div class="col-md-2 side_panel">
-				<div class="side_panel_content">
-					<div class="side_panel_header">TC</div>
-					<div class="side_panel_links">
-						<nav class="nav flex-column">
-						  <a class="nav-link" href="#aboutMe">About Me</a>
-						  <a class="nav-link" href="#projects">Projects</a>
-						  <a class="nav-link" href="#contact">Contact</a>
-						</nav>
+			<div class="col-md-2" id="menu">
+				<div class="menu_content">
+					<div id="menu_links">
+						<ul class="nav flex-column">
+						  <li><a class="nav-link" href="">TC</a></li>
+						  <li><a class="nav-link" href="#aboutMe">About Me</a></li>
+						  <li><a class="nav-link" href="#projects">Projects</a></li>
+						  <li><a class="nav-link" href="#contact">Contact</a></li>
+						 </ul>
 					</div>
 				</div>
 			</div>
 			
-			<div data-spy="scroll" data-target="#side_panel_links" class="col-md-10 hero">
+			<div id="hero" data-spy="scroll" data-target="#side_panel_links" data-offset="50" class="col-md-10">
 	
 					<div id="main" class='row'>
 						<div class="col-md-12">
+							<div class="main_background"></div>
 							<div class="main_content">
 								<div class="main_header">
 									TYLER COOKSON
@@ -57,9 +58,6 @@
 							</div>
 						</div>
 					</div>
-
-
-
 
 					<div id="aboutMe" class='row'>
 						<div class="col-md-10 offset-md-1">
@@ -181,23 +179,37 @@
 
 						</div>
 						
-						
 					</div>
 					
-
-
-
 					<div id="contact" class="row">
 						<div class="col-md-10 offset-md-1">
-							<div class="contact_header">
-								Contact
-							</div>
-							<div class='contact_info'>
-								<div>
-									tcookson0805@gmail.com
+							<div class="row">
+								<div class="col-md-4">
+									<div class="contact_header">
+										Contact
+									</div>
+									<div class='contact_info'>
+										<div>
+											tcookson0805@gmail.com
+										</div>
+										<div>
+											+1 573.270.4891								
+										</div>
+									</div>
 								</div>
-								<div>
-									+1 573.270.4891								
+								<div class="col-md-8">
+									<form action="" class="form">
+										<div class='form_div'>
+											<input class='form_input' type="text" />
+										</div>
+										<div class='form_div'>
+											<input class='form_input' type="text" />
+										</div>
+										<div class="form_div">
+											<textarea class='form_textarea'></textarea>
+										</div>
+									</form>
+
 								</div>
 							</div>
 						</div>
@@ -205,22 +217,15 @@
 
 				</div>
 
-
 		</div>
 
 
-
-
-	
-
-
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 
-	<script src="https://use.fontawesome.com/12ab5b03ba.js"></script>
+	<script src="js/script.js"></script>
 
-<!-- 	<script src="js/script.js"></script> -->
 </body>
 </html>
