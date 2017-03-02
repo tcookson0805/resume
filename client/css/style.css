@@ -6,13 +6,15 @@ html, body {
   background-color: #1D2F3E;
   text-align: center;
   color: white; }
+  @media screen and (max-width: 992px) {
+    #menu {
+      display: none; } }
   #menu .menu_content {
     margin: 4em auto;
-    position: fixed; }
-    #menu .menu_content .menu_header {
-      font-weight: bold;
-      font-size: 2em; }
+    position: fixed;
+    border: 0.1em solid white; }
     #menu .menu_content #menu_links {
+      border: 0.1em solid white;
       font-family: "Libre Baskerville", serif;
       font-size: 1.5em; }
       #menu .menu_content #menu_links a {
@@ -64,12 +66,12 @@ html, body {
   border-bottom: 0.1em solid black; }
 
 #aboutMe {
-  padding-top: 3rem; }
+  padding-top: 3em; }
   #aboutMe .aboutMe_header {
-    font-size: 3em;
     font-weight: bold;
+    font-size: 3em;
     color: #1D2F3E;
-    margin-bottom: 1em; }
+    margin-bottom: 0.5em; }
   #aboutMe .aboutMe_right {
     text-align: center; }
     #aboutMe .aboutMe_right .aboutMe_right_header {
@@ -80,7 +82,8 @@ html, body {
   #projects .projects_header {
     font-weight: bold;
     font-size: 3em;
-    margin: 0.5em auto; }
+    color: #1D2F3E;
+    margin-bottom: 0.5em; }
   #projects .project {
     margin-bottom: 5em; }
     #projects .project .project_title {
@@ -103,28 +106,65 @@ html, body {
     #projects .project .project_image img {
       border: 0.2em solid #979797;
       max-width: 100%;
-      position: relative; }
+      position: relative;
+      top: 55%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
 #contact {
   margin-bottom: 3em; }
   #contact .contact_header {
     font-weight: bold;
     font-size: 3em;
-    margin: 0.5em auto; }
+    color: #1D2F3E;
+    margin-bottom: 0.5em; }
   #contact .contact_info {
-    font-size: 1em; }
+    font-size: 1em;
+    text-align: center; }
 
 .form {
-  display: block;
-  margin-top: 0em; }
+  display: block; }
   .form .form_div {
     position: relative;
     max-height: 150px;
     margin-bottom: 1.25em; }
     .form .form_div .form_input {
-      width: 100%; }
+      width: 100%;
+      height: 2em;
+      text-indent: 2.5em;
+      border: 0.1em solid black; }
     .form .form_div .form_textarea {
       width: 100%;
-      height: 10em; }
+      height: 10em;
+      text-indent: 2.5em;
+      border: 0.1em solid black; }
+    .form .form_div .form_label {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2em;
+      height: 2em;
+      border: 0.1em solid black;
+      text-align: center;
+      background-color: black; }
+      .form .form_div .form_label i {
+        font-size: 1.5em;
+        color: white;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+    .form .form_div .form_submit {
+      overflow: auto; }
+      .form .form_div .form_submit button {
+        float: right;
+        margin-top: 1em;
+        color: white;
+        background-color: black;
+        border: none;
+        padding: 0.25em;
+        width: 7.5em;
+        cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
