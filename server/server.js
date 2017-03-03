@@ -49,9 +49,13 @@ app.get('/send', function(req, res) {
 		html: message
 	}
 		console.log('here')
-	smtpTransporter.sendMail(mailOptions, function(error, response) {
+		console.log(mailOptions);
 
+	smtpTransporter.sendMail(mailOptions, function(error, response) {
+		
 		console.log('inside .sendMail');
+		console.log('response', response);
+		console.log('error', error)
 		if(error) {
 			console.log(error);
 			res.end('error')
