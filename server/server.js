@@ -44,8 +44,10 @@ app.get('/send', function(req, res) {
 		subject: req.query.subject,
 		html: message
 	}
-
+		console.log('here')
 	smtpTransport.sendMail(mailOptions, function(error, response) {
+
+		console.log('inside .sendMail');
 		if(error) {
 			console.log(error);
 			res.end('error')
