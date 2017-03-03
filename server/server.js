@@ -32,10 +32,11 @@ console.log('process.env.PORT', process.env.PORT);
 // 	auth: {
 // 		user: USERNAME,
 // 		pass: PASSWORD
-// 	}
+// 	}d
 // }));
 
 const smtpTransporter = nodemailer.createTransport(smtpTransport('smtps://' + USERNAME + '%40gmail.com:' + PASSWORD + '@smtp.gmail.com'))
+const FROM = USERNAME + '@gmail.com';
 
 app.get('/send', function(req, res) {
 
@@ -43,7 +44,7 @@ app.get('/send', function(req, res) {
 
 	let mailOptions = {
 		to: EMAIL,
-		from: req.query.name,
+		from: FROM,
 		subject: req.query.subject,
 		html: message
 	}
@@ -56,6 +57,7 @@ app.get('/send', function(req, res) {
 			res.end('error')
 		} else {
 			console.log("message sent");
+			console.log(response);
 			res.end("sent");
 		}
 	});
