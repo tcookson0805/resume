@@ -25,7 +25,7 @@ const EMAIL = process.env.EMAIL || CONFIG_EMAIL;
 
 console.log('process.env.PORT', process.env.PORT);
 
-const smtpTransporter = nodemailer.createTransport(smtpTransport{
+const smtpTransporter = nodemailer.createTransport(smtpTransport({
 	service: 'gmail',
 	host: 'smtp.gmail.com',
 	port: PORT,
@@ -33,7 +33,7 @@ const smtpTransporter = nodemailer.createTransport(smtpTransport{
 		user: USERNAME,
 		pass: PASSWORD
 	}
-});
+}));
 
 app.get('/send', function(req, res) {
 
