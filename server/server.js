@@ -18,8 +18,6 @@ if(process.env.NODE_ENV !== 'production') {
 	var CONFIG_EMAIL = require('../config/email').CONFIG_EMAIL;
 }
 
-console.log('process.env.NODE_ENV', process.env.NODE_ENV);
-
 const USERNAME = process.env.USERNAME || CONFIG_USERNAME;
 const PASSWORD = process.env.PASSWORD || CONFIG_PASSWORD;
 const EMAIL = process.env.EMAIL || CONFIG_EMAIL;
