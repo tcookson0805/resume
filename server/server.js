@@ -25,15 +25,17 @@ const EMAIL = process.env.EMAIL || CONFIG_EMAIL;
 
 console.log('process.env.PORT', process.env.PORT);
 
-const smtpTransporter = nodemailer.createTransport(smtpTransport({
-	service: 'gmail',
-	host: 'smtp.gmail.com',
-	port: PORT,
-	auth: {
-		user: USERNAME,
-		pass: PASSWORD
-	}
-}));
+// const smtpTransporter = nodemailer.createTransport(smtpTransport({
+// 	service: 'gmail',
+// 	host: 'smtp.gmail.com',
+// 	port: PORT,
+// 	auth: {
+// 		user: USERNAME,
+// 		pass: PASSWORD
+// 	}
+// }));
+
+const smtpTransporter = nodemailer.createTransport(smtpTransport('smtps://' + USERNAME + '%40gmail.com:' + PASSWORD + '@smtp.gmail.com'))
 
 app.get('/send', function(req, res) {
 
@@ -57,6 +59,8 @@ app.get('/send', function(req, res) {
 			res.end("sent");
 		}
 	});
+
+
 });
 
 
