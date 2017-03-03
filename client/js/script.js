@@ -25,14 +25,14 @@ $(document).ready(function() {
 	$('.form_submit').on('click', 'button', function(event) {
 
 		event.preventDefault();
-		
+
 		var name = $('#sender_name').val();
 		var email = $('#sender_email').val();
 		var subject = $('#sender_name').val() + ' via tylercookson.com';
 		var message = $('#sender_message').val();
 		// console.log('clicked');
 
-		$.get('http://tylercookson.com/send', {
+		$.get('https://tylercookson.herokuapp.com/send', {
 			name: name,
 			email: email,
 			subject: subject,
