@@ -22,6 +22,7 @@ const USERNAME = process.env.USERNAME || CONFIG_USERNAME;
 const PASSWORD = process.env.PASSWORD || CONFIG_PASSWORD;
 const EMAIL = process.env.EMAIL || CONFIG_EMAIL;
 
+console.log('process.env.PORT', process.env.PORT);
 
 const smtpTransport = nodemailer.createTransport({
 	service: 'gmail',
