@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const nodemailer = require('nodemailer');
+const smtpTransport = require('nodemailer-smtp-transport');
 
 const PORT = process.env.PORT || 8080;
 
@@ -24,7 +25,7 @@ const EMAIL = process.env.EMAIL || CONFIG_EMAIL;
 
 console.log('process.env.PORT', process.env.PORT);
 
-const smtpTransport = nodemailer.createTransport({
+const smtpTransporter = nodemailer.createTransport(smtpTransport{
 	service: 'gmail',
 	host: 'smtp.gmail.com',
 	port: PORT,
@@ -45,7 +46,7 @@ app.get('/send', function(req, res) {
 		html: message
 	}
 		console.log('here')
-	smtpTransport.sendMail(mailOptions, function(error, response) {
+	smtpTransporter.sendMail(mailOptions, function(error, response) {
 
 		console.log('inside .sendMail');
 		if(error) {
