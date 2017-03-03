@@ -29,6 +29,9 @@ html, body {
 }
 
 #menu {
+	position: fixed;
+	height: 100%;
+	width: 20%;
 	background-color: #1D2F3E;
 	text-align: center;
 	color: white;
@@ -37,11 +40,8 @@ html, body {
 	}
 	.menu_content {
 		margin: 4em auto;
-		position: fixed;
-		border: 0.1em solid white;
-		#menu_links {
 
-			border: 0.1em solid white;
+		#menu_links {
 			font-family: $secondFont;
 			font-size: 1.5em;
 			@include links;
@@ -50,14 +50,21 @@ html, body {
 }
 
 #hero {
+	margin-left: 20%;
 	overflow-y: scroll;
 	position: relative;
+	@media screen and (max-width: $break-large) {
+		margin-left: 0;
+	}
 }
 
 #main {
 	text-align: center;
 	overflow: auto;
 	height: 100vh;
+	@media screen and (max-width: $break-medium) {
+		height: 75vh;
+	}
 	.main_content {
 		position: relative;
 		top: 30%;
@@ -68,11 +75,20 @@ html, body {
 		.main_header {
 			font-weight: bold;
 			margin-bottom: 0.5em;
-			font-size: 5em;
+			font-size: 4.75em;
 			color: #1D2F3E;
+			@media screen and (max-width: $break-medium) {
+				font-size: 4em;
+			}
+			@media screen and (max-width: $break-small) {
+				font-size: 3.5em;
+			}
 		}
 		.main_middle {
 			font-size: 2em;
+			@media screen and (max-width: $break-small) {
+				font-size: 1.5em;
+			}
 		}
 		.main_links a {
 			font-size: 3em;
@@ -98,6 +114,9 @@ html, body {
 	-webkit-filter: grayscale(1); 
 	filter: grayscale(1);
 	border-bottom: 0.1em solid black;
+	@media screen and (max-width: $break-medium) {
+		height: 75vh;
+	}
 }
 
 #aboutMe {
@@ -108,10 +127,21 @@ html, body {
 	.aboutMe_left {
 
 	}
-	.aboutMe_right {
+	.aboutMe_tools_header {
 		text-align: center;
-		.aboutMe_right_header {
-			font-weight: bold
+		@include sectionHeader;
+		@media screen and (max-width: $break-medium) {
+			text-align: left;
+			padding-top: 0.5em;
+		}
+	}
+	.tech_tools {
+		text-align: center;
+		.tool {
+			margin: auto 0.5em;
+			@media screen and (max-width: $break-medium) {
+				float: left;
+			}
 		}
 	}
 }
@@ -131,8 +161,19 @@ html, body {
 			font-family: $secondFont;
 			margin: 1em auto;
 		}
+		.project_techs {
+			@media screen and (max-width: $break-medium) {
+				float: left;
+				width: 60%;
+			}
+		}
 		.project_links {
 			margin: 1em auto;
+			@media screen and (max-width: $break-medium) {
+				float: left;
+				width: 40%;
+				margin: auto;
+			}
 			.project_link {
 				background-color: #1D2F3E;
 				text-align: center;
@@ -147,12 +188,17 @@ html, body {
 		.project_image  {
 			img {
 				border: 0.2em solid #979797;
-				max-width: 100%;
+				width: 100%;
 				position: relative;
 				top: 55%;
 				-webkit-transform: translateY(-50%);
 				-ms-transform: translateY(-50%);
 				transform: translateY(-50%);
+				@media screen and (max-width: $break-medium) {
+					width: 80%;
+					margin-left: 10%;
+					margin-top: 0.75em;
+				}
 			}
 		}	
 	}
@@ -166,6 +212,9 @@ html, body {
 	.contact_info {
 		font-size: 1em;
 		text-align: center;
+	}
+	#contact_form {
+		// display: none;
 	}
 }
 
