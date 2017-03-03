@@ -31,7 +31,7 @@ $(document).ready(function() {
 		var message = $('#sender_message').val();
 		// console.log('clicked');
 
-		$.get('http://localhost:8080/send', {
+		$.get('http://tylercookson.com/send', {
 			name: name,
 			email: email,
 			subject: subject,
