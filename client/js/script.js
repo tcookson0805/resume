@@ -32,7 +32,7 @@ $(document).ready(function() {
 		var message = $('#sender_message').val();
 		// console.log('clicked');
 
-		$.get('https://tylercookson.herokuapp.com/send', {
+		$.get('http://www.tylercookson.com/send', {
 			name: name,
 			email: email,
 			subject: subject,
