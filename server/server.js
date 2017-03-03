@@ -28,6 +28,7 @@ const EMAIL = process.env.EMAIL || CONFIG_EMAIL;
 const smtpTransport = nodemailer.createTransport({
 	service: 'gmail',
 	host: 'smtp.gmail.com',
+	port: PORT,
 	auth: {
 		user: USERNAME,
 		pass: PASSWORD
