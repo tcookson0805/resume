@@ -35,6 +35,9 @@ console.log('process.env.PORT', process.env.PORT);
 // 	}d
 // }));
 
+console.log('USERNAME', USERNAME);
+console.log('PASSWORD', PASSWORD);
+
 const smtpTransporter = nodemailer.createTransport(smtpTransport('smtps://' + USERNAME + '%40gmail.com:' + PASSWORD + '@smtp.gmail.com'))
 const FROM = USERNAME + '@gmail.com';
 
