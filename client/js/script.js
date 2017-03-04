@@ -22,9 +22,8 @@ $(document).ready(function() {
 	});
 
 
-	$('.form_submit').on('click', 'button', function(event) {
+	$('.form_submit').on('click', 'button', function() {
 
-		event.preventDefault();
 
 		var name = $('#sender_name').val();
 		var email = $('#sender_email').val();
@@ -38,7 +37,6 @@ $(document).ready(function() {
 			subject: subject,
 			message: message
 		}, function(data) {
-				console.log('data', data);
 			if(data == 'sent') {
 				console.log('sent!!!')
 			} else {

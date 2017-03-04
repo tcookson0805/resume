@@ -38,7 +38,7 @@ console.log('process.env.PORT', process.env.PORT);
 const smtpTransporter = nodemailer.createTransport(smtpTransport('smtps://' + USERNAME + '%40gmail.com:' + PASSWORD + '@smtp.gmail.com'))
 const FROM = USERNAME + '@gmail.com';
 
-app.get('/send', function(req, res) {
+app.get('/send:something', function(req, res) {
 
 	let message = '<div><b>Sender Name: </b>' + req.query.name +'</div><div><b>Sender Email: </b>' + req.query.email + '</div><br /><div>' + req.query.message + '</div>'
 
