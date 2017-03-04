@@ -12,7 +12,6 @@ app.get('/', function (req, res) {
 	res.sendFile('index.html')
 });
 
-
 if(process.env.NODE_ENV !== 'production') {
 	var CONFIG_USERNAME = require('../config/email').CONFIG_USERNAME;
 	var CONFIG_PASSWORD = require('../config/email').CONFIG_PASSWORD;
@@ -23,20 +22,6 @@ const USERNAME = process.env.USERNAME || CONFIG_USERNAME;
 const PASSWORD = process.env.PASSWORD || CONFIG_PASSWORD;
 const EMAIL = process.env.EMAIL || CONFIG_EMAIL;
 
-console.log('process.env.PORT', process.env.PORT);
-
-// const smtpTransporter = nodemailer.createTransport(smtpTransport({
-// 	service: 'gmail',
-// 	host: 'smtp.gmail.com',
-// 	port: PORT,
-// 	auth: {
-// 		user: USERNAME,
-// 		pass: PASSWORD
-// 	}d
-// }));
-
-console.log('USERNAME', USERNAME);
-console.log('PASSWORD', PASSWORD);
 
 const smtpTransporter = nodemailer.createTransport(smtpTransport('smtps://' + USERNAME + '%40gmail.com:' + PASSWORD + '@smtp.gmail.com'))
 const FROM = USERNAME + '@gmail.com';
@@ -51,20 +36,13 @@ app.get('/send', function(req, res) {
 		subject: req.query.subject,
 		html: message
 	}
-		console.log('here')
-		console.log(mailOptions);
 
 	smtpTransporter.sendMail(mailOptions, function(error, response) {
-		
-		console.log('inside .sendMail');
-		console.log('response', response);
-		console.log('error', error)
 		if(error) {
 			console.log(error);
 			res.end('error')
 		} else {
 			console.log("message sent");
-			console.log(response);
 			res.end("sent");
 		}
 	});

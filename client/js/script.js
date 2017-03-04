@@ -24,8 +24,6 @@ $(document).ready(function() {
 
 	$('.form_submit').on('click', 'button', function(event) {
 
-		event.preventDefault();
-		
 		var name = $('#sender_name').val();
 		var email = $('#sender_email').val();
 		var subject = $('#sender_name').val() + ' via tylercookson.com';
