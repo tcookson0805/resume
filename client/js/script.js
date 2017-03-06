@@ -52,7 +52,7 @@ $(document).ready(function() {
 			$('#hero').animate({'margin-left': '0'});		
 			$('#menu').hide()
 		} else {
-			$('#hero').animate({'margin-left': '20%'});		
+			$('#hero').animate({'margin-left': '25%'});		
 			$('#menu').show(400);
 		}
 

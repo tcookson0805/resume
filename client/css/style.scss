@@ -31,6 +31,9 @@ $campaignDonors: url('../images/AttorneyGap_Main.png');
 	margin-top: 1em;
 	margin-bottom: 1.5em;
 	text-align: center;
+	@media screen and (max-width: $break-small) {
+		font-size: 1.5em;
+	}
 }
 
 @mixin projectImage {
@@ -57,7 +60,7 @@ $campaignDonors: url('../images/AttorneyGap_Main.png');
 	}
 	@media screen and (max-width: $break-small) {
 		margin: 1em auto;
-		height: 15em;
+		height: 10em;
 		width: 100%
 	}
 	@media screen and (max-width: $break-xsmall) {
@@ -96,8 +99,9 @@ html, body {
 
 .section_break {
 	height: 5em;
-	padding: 0 !important;
-	margin: 0 !important;
+	@media screen and (max-width: $break-small) {
+		height: 3em;
+	}
 }
 
 .inlineLink {
@@ -185,7 +189,7 @@ html, body {
 #menu {
 	position: fixed;
 	height: 100%;
-	width: 20%;
+	width: 25%;
 	background-color: $darkBlue;
 	text-align: center;
 	color: white;
@@ -203,6 +207,12 @@ html, body {
 		transform: translateY(25%);
 		#menu_links {
 			font-size: 1.5em;
+			@media screen and (max-width: $break-large) {
+				font-size: 1em;
+			}
+			@media screen and (max-width: $break-small) {
+				font-size: 0.75em;
+			}
 			.nav-link {
 				margin: 0.75em auto;
 			}
@@ -212,7 +222,7 @@ html, body {
 }
 
 #hero {
-	margin-left: 20%;
+	margin-left: 25%;
 	overflow-y: scroll;
 	position: absolute;
 	opacity: 0;
@@ -247,13 +257,13 @@ html, body {
 				font-size: 4em;
 			}
 			@media screen and (max-width: $break-small) {
-				font-size: 3.5em;
+				font-size: 2em;
 			}
 		}
 		.main_middle {
 			font-size: 1.5em;
 			@media screen and (max-width: $break-small) {
-				font-size: 1.5em;
+				font-size: 1em;
 			}
 		}
 		.main_links a {
@@ -296,6 +306,9 @@ html, body {
 	}
 	.aboutMe_left {
 		font-family: $secondFont;
+		@media screen and (max-width: $break-small) {
+			font-size: 0.75em;
+		}
 	}
 	.aboutMe_tools_header {
 		text-align: center;
@@ -316,17 +329,22 @@ html, body {
 			@media screen and (max-width: $break-large) {
 				float: left;
 			}
+			@media screen and (max-width: $break-small) {
+				font-size: 0.75em;
+			}
 		}
 	}
 }
 
 #projects {
-	padding-top: 3em;
 	.projects_header{
 		@include sectionHeader;
 	}
 	.project_padding {
-		height: 5em;
+		height: 4em;
+		@media screen and (max-width: $break-small) {
+			height: 2em;
+		}
 	}
 	.project {
 		.project_title {
@@ -343,12 +361,18 @@ html, body {
 			color: $darkBlue;
 			font-family: $secondFont;
 			margin: 1em auto;
+			@media screen and (max-width: $break-small) {
+				font-size: 0.75em;
+			}
 		}
 		.project_techs {
 			color: $lightGray;
 			@media screen and (max-width: $break-medium) {
 				float: left;
 				width: 100%;
+			}
+			@media screen and (max-width: $break-small) {
+				font-size: 0.75em;
 			}
 		}
 		.project_links {
