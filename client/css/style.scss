@@ -34,8 +34,8 @@ $campaignDonors: url('../images/AttorneyGap_Main.png');
 }
 
 @mixin projectImage {
-	height: 11em;
-	width: 100%;
+	height: 12em;
+	width: 20em;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: 50% 0%;
@@ -47,9 +47,18 @@ $campaignDonors: url('../images/AttorneyGap_Main.png');
 	-moz-user-select: none;
 	-ms-user-select: none; 
 	user-select: none;   
-	border: 0.2em solid $darkBlue;
 	&:hover{
 	  background-size: 115%;
+	}
+	@media screen and (max-width: $break-large) {
+		margin: 1em auto;
+		height: 20em;
+		width: 100%
+	}
+	@media screen and (max-width: $break-medium) {
+		margin: 1em auto;
+		height: 20em;
+		width: 100%
 	}
 	.box-info {
 		background: rgba( 35, 35, 35, 0.7 );
@@ -57,22 +66,21 @@ $campaignDonors: url('../images/AttorneyGap_Main.png');
 		height: 100%;
 		width: 100%;
 		-webkit-transition: opacity 0.45s ease-in-out;
-			transition: opacity 0.45s ease-in-out;
-
+		transition: opacity 0.45s ease-in-out;
 		text-align: center;
 		padding: 20% 0 0;
 		font-weight: 900;
 		font-size: 30px;
 		font-family: "Lato", Helvetica, Arial, sans-serif;
 		color: #fff;
-
-
 		opacity: 0;
-
 		&:hover{
 		 opacity: 1;
 		}
-
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -82,7 +90,6 @@ html, body {
 }
 
 .section_break {
-	// border-bottom: 0.1em solid $lightGray;
 	height: 5em;
 	padding: 0 !important;
 	margin: 0 !important;
@@ -290,8 +297,9 @@ html, body {
 		color: $darkBlue;
 		font-size: 1.5em;
 		font-weight: bold;
-		@media screen and (max-width: $break-medium) {
+		@media screen and (max-width: $break-large) {
 			text-align: left;
+			margin-left: 0.2em;
 			padding-top: 0.5em;
 		}
 	}
@@ -300,7 +308,7 @@ html, body {
 		.tool {
 			margin: auto 0.5em;
 			color: $lightGray;
-			@media screen and (max-width: $break-medium) {
+			@media screen and (max-width: $break-large) {
 				float: left;
 			}
 		}
@@ -346,7 +354,6 @@ html, body {
 				margin: auto;
 			}
 		}
-
 		.project_image_gigPlay {
 			background-image: url('../images/gigplay1.png');
 			@include projectImage;
@@ -358,28 +365,9 @@ html, body {
 		.project_image_campaignDonors {
 			background-image: url('../images/campaignDonors1.png');
 			@include projectImage;
-		}	
-		// .project_image  {
-		// 	overflow: auto;
-		// 	color: $darkBlue;
-		// 	img {
-		// 		margin-top: 1em;
-		// 		border: 0.2em solid $darkBlue;
-		// 		width: 100%;
-		// 		position: relative;
-		// 		cursor: pointer;
-		// 		&:hover {
-		// 			border: 0.2em solid $lightBlue;
-		// 		};
-		// 		@media screen and (max-width: $break-medium) {
-		// 			margin-top: 1.5em;
-		// 		}
-		// 	}
-		// }	
+		}		
 	}
 }
-
-
 
 #contact {
 	margin-bottom: 3em;

@@ -188,16 +188,17 @@ html, body {
     color: #1D2F3E;
     font-size: 1.5em;
     font-weight: bold; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       #aboutMe .aboutMe_tools_header {
         text-align: left;
+        margin-left: 0.2em;
         padding-top: 0.5em; } }
   #aboutMe .tech_tools {
     text-align: center; }
     #aboutMe .tech_tools .tool {
       margin: auto 0.5em;
       color: #9297A6; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 992px) {
         #aboutMe .tech_tools .tool {
           float: left; } }
 
@@ -238,8 +239,8 @@ html, body {
         margin: auto; } }
   #projects .project .project_image_gigPlay {
     background-image: url("../images/gigplay1.png");
-    height: 11em;
-    width: 100%;
+    height: 12em;
+    width: 20em;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50% 0%;
@@ -250,10 +251,19 @@ html, body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    border: 0.2em solid #1D2F3E; }
+    user-select: none; }
     #projects .project .project_image_gigPlay:hover {
       background-size: 115%; }
+    @media screen and (max-width: 992px) {
+      #projects .project .project_image_gigPlay {
+        margin: 1em auto;
+        height: 20em;
+        width: 100%; } }
+    @media screen and (max-width: 768px) {
+      #projects .project .project_image_gigPlay {
+        margin: 1em auto;
+        height: 20em;
+        width: 100%; } }
     #projects .project .project_image_gigPlay .box-info {
       background: rgba(35, 35, 35, 0.7);
       box-sizing: border-box;
@@ -270,10 +280,13 @@ html, body {
       opacity: 0; }
       #projects .project .project_image_gigPlay .box-info:hover {
         opacity: 1; }
+      #projects .project .project_image_gigPlay .box-info a {
+        color: #fff;
+        text-decoration: none; }
   #projects .project .project_image_attorneyGap {
     background-image: url("../images/attorneyGap1.png");
-    height: 11em;
-    width: 100%;
+    height: 12em;
+    width: 20em;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50% 0%;
@@ -284,10 +297,19 @@ html, body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    border: 0.2em solid #1D2F3E; }
+    user-select: none; }
     #projects .project .project_image_attorneyGap:hover {
       background-size: 115%; }
+    @media screen and (max-width: 992px) {
+      #projects .project .project_image_attorneyGap {
+        margin: 1em auto;
+        height: 20em;
+        width: 100%; } }
+    @media screen and (max-width: 768px) {
+      #projects .project .project_image_attorneyGap {
+        margin: 1em auto;
+        height: 20em;
+        width: 100%; } }
     #projects .project .project_image_attorneyGap .box-info {
       background: rgba(35, 35, 35, 0.7);
       box-sizing: border-box;
@@ -304,10 +326,13 @@ html, body {
       opacity: 0; }
       #projects .project .project_image_attorneyGap .box-info:hover {
         opacity: 1; }
+      #projects .project .project_image_attorneyGap .box-info a {
+        color: #fff;
+        text-decoration: none; }
   #projects .project .project_image_campaignDonors {
     background-image: url("../images/campaignDonors1.png");
-    height: 11em;
-    width: 100%;
+    height: 12em;
+    width: 20em;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50% 0%;
@@ -318,10 +343,19 @@ html, body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    border: 0.2em solid #1D2F3E; }
+    user-select: none; }
     #projects .project .project_image_campaignDonors:hover {
       background-size: 115%; }
+    @media screen and (max-width: 992px) {
+      #projects .project .project_image_campaignDonors {
+        margin: 1em auto;
+        height: 20em;
+        width: 100%; } }
+    @media screen and (max-width: 768px) {
+      #projects .project .project_image_campaignDonors {
+        margin: 1em auto;
+        height: 20em;
+        width: 100%; } }
     #projects .project .project_image_campaignDonors .box-info {
       background: rgba(35, 35, 35, 0.7);
       box-sizing: border-box;
@@ -338,6 +372,9 @@ html, body {
       opacity: 0; }
       #projects .project .project_image_campaignDonors .box-info:hover {
         opacity: 1; }
+      #projects .project .project_image_campaignDonors .box-info a {
+        color: #fff;
+        text-decoration: none; }
 
 #contact {
   margin-bottom: 3em; }
