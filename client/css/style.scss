@@ -10,6 +10,11 @@ $darkBlue: #1D2F3E;
 $lightBlue: #65A3D6;
 $lightGray: #9297A6;
 
+$gigPlay: url('../images/gigplay.png');
+$attorneyGap: url('../images/AttorneyGap_Signin.png');
+$campaignDonors: url('../images/AttorneyGap_Main.png');
+
+
 @mixin links {
 	a {
 		color: white;
@@ -28,17 +33,66 @@ $lightGray: #9297A6;
 	text-align: center;
 }
 
+@mixin projectImage {
+	height: 11em;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 50% 0%;
+	-webkit-transition: background-size 0.275s ease-in-out;
+	transition: background-size 0.275s ease-in-out;
+	flex-grow: 1;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none; 
+	user-select: none;   
+	border: 0.2em solid $darkBlue;
+	&:hover{
+	  background-size: 115%;
+	}
+	.box-info {
+		background: rgba( 35, 35, 35, 0.7 );
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		-webkit-transition: opacity 0.45s ease-in-out;
+			transition: opacity 0.45s ease-in-out;
+
+		text-align: center;
+		padding: 20% 0 0;
+		font-weight: 900;
+		font-size: 30px;
+		font-family: "Lato", Helvetica, Arial, sans-serif;
+		color: #fff;
+
+
+		opacity: 0;
+
+		&:hover{
+		 opacity: 1;
+		}
+
+	}
+}
+
 html, body {
 	margin: 0;
 	font-family: $mainFont;
 }
 
 .section_break {
-	border-bottom: 0.1em solid $lightGray;
+	// border-bottom: 0.1em solid $lightGray;
 	height: 5em;
 	padding: 0 !important;
 	margin: 0 !important;
+}
 
+.inlineLink {
+	&:hover {
+		color: $lightBlue;
+		text-decoration: none;
+	}
 }
 
 #nav-icon1 {
@@ -115,6 +169,7 @@ html, body {
   transform: rotate(-135deg);
 }
 
+
 #menu {
 	position: fixed;
 	height: 100%;
@@ -128,15 +183,16 @@ html, body {
 	.menu_logo img{
 		margin-top: 1em;
 		width: 50%;
+		cursor: pointer;
 	}
 	.menu_content {
-		-webkit-transform: translateY(15%);
-		-ms-transform: translateY(15%);
-		transform: translateY(15%);
+		-webkit-transform: translateY(25%);
+		-ms-transform: translateY(25%);
+		transform: translateY(25%);
 		#menu_links {
-			font-size: 25px;
+			font-size: 1.5em;
 			.nav-link {
-				margin: 0.5em auto;
+				margin: 0.75em auto;
 			}
 			@include links;
 		}
@@ -163,9 +219,9 @@ html, body {
 	.main_content {
 		position: relative;
 		// top: 30%;
-		-webkit-transform: translateY(50%);
-		-ms-transform: translateY(50%);
-		transform: translateY(50%);
+		-webkit-transform: translateY(70%);
+		-ms-transform: translateY(70%);
+		transform: translateY(70%);
 		@media screen and (max-width: $break-large) {
 			-webkit-transform: translateY(0%);
 			-ms-transform: translateY(0%);
@@ -183,7 +239,7 @@ html, body {
 			}
 		}
 		.main_middle {
-			font-size: 25px;
+			font-size: 1.5em;
 			@media screen and (max-width: $break-small) {
 				font-size: 1.5em;
 			}
@@ -290,25 +346,40 @@ html, body {
 				margin: auto;
 			}
 		}
-		.project_image  {
-			overflow: auto;
-			color: $darkBlue;
-			img {
-				margin-top: 1em;
-				border: 0.2em solid $darkBlue;
-				width: 100%;
-				position: relative;
-				cursor: pointer;
-				&:hover {
-					border: 0.2em solid $lightBlue;
-				};
-				@media screen and (max-width: $break-medium) {
-					margin-top: 1.5em;
-				}
-			}
+
+		.project_image_gigPlay {
+			background-image: url('../images/gigplay1.png');
+			@include projectImage;
+		}
+		.project_image_attorneyGap {
+			background-image: url('../images/attorneyGap1.png');
+			@include projectImage;
+		}
+		.project_image_campaignDonors {
+			background-image: url('../images/campaignDonors1.png');
+			@include projectImage;
 		}	
+		// .project_image  {
+		// 	overflow: auto;
+		// 	color: $darkBlue;
+		// 	img {
+		// 		margin-top: 1em;
+		// 		border: 0.2em solid $darkBlue;
+		// 		width: 100%;
+		// 		position: relative;
+		// 		cursor: pointer;
+		// 		&:hover {
+		// 			border: 0.2em solid $lightBlue;
+		// 		};
+		// 		@media screen and (max-width: $break-medium) {
+		// 			margin-top: 1.5em;
+		// 		}
+		// 	}
+		// }	
 	}
 }
+
+
 
 #contact {
 	margin-bottom: 3em;

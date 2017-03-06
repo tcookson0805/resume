@@ -3,10 +3,13 @@ html, body {
   font-family: "HelveticaNeue", "Helvetica", "Roboto", sans-serif; }
 
 .section_break {
-  border-bottom: 0.1em solid #9297A6;
   height: 5em;
   padding: 0 !important;
   margin: 0 !important; }
+
+.inlineLink:hover {
+  color: #65A3D6;
+  text-decoration: none; }
 
 #nav-icon1 {
   display: none;
@@ -86,15 +89,16 @@ html, body {
       display: none; } }
   #menu .menu_logo img {
     margin-top: 1em;
-    width: 50%; }
+    width: 50%;
+    cursor: pointer; }
   #menu .menu_content {
-    -webkit-transform: translateY(15%);
-    -ms-transform: translateY(15%);
-    transform: translateY(15%); }
+    -webkit-transform: translateY(25%);
+    -ms-transform: translateY(25%);
+    transform: translateY(25%); }
     #menu .menu_content #menu_links {
-      font-size: 25px; }
+      font-size: 1.5em; }
       #menu .menu_content #menu_links .nav-link {
-        margin: 0.5em auto; }
+        margin: 0.75em auto; }
       #menu .menu_content #menu_links a {
         color: white; }
         #menu .menu_content #menu_links a:hover {
@@ -118,9 +122,9 @@ html, body {
       height: 75vh; } }
   #main .main_content {
     position: relative;
-    -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    transform: translateY(50%); }
+    -webkit-transform: translateY(70%);
+    -ms-transform: translateY(70%);
+    transform: translateY(70%); }
     @media screen and (max-width: 992px) {
       #main .main_content {
         -webkit-transform: translateY(0%);
@@ -137,7 +141,7 @@ html, body {
         #main .main_content .main_header {
           font-size: 3.5em; } }
     #main .main_content .main_middle {
-      font-size: 25px; }
+      font-size: 1.5em; }
       @media screen and (max-width: 576px) {
         #main .main_content .main_middle {
           font-size: 1.5em; } }
@@ -232,20 +236,108 @@ html, body {
         float: left;
         width: 40%;
         margin: auto; } }
-  #projects .project .project_image {
-    overflow: auto;
-    color: #1D2F3E; }
-    #projects .project .project_image img {
-      margin-top: 1em;
-      border: 0.2em solid #1D2F3E;
+  #projects .project .project_image_gigPlay {
+    background-image: url("../images/gigplay1.png");
+    height: 11em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    -webkit-transition: background-size 0.275s ease-in-out;
+    transition: background-size 0.275s ease-in-out;
+    flex-grow: 1;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.2em solid #1D2F3E; }
+    #projects .project .project_image_gigPlay:hover {
+      background-size: 115%; }
+    #projects .project .project_image_gigPlay .box-info {
+      background: rgba(35, 35, 35, 0.7);
+      box-sizing: border-box;
+      height: 100%;
       width: 100%;
-      position: relative;
-      cursor: pointer; }
-      #projects .project .project_image img:hover {
-        border: 0.2em solid #65A3D6; }
-      @media screen and (max-width: 768px) {
-        #projects .project .project_image img {
-          margin-top: 1.5em; } }
+      -webkit-transition: opacity 0.45s ease-in-out;
+      transition: opacity 0.45s ease-in-out;
+      text-align: center;
+      padding: 20% 0 0;
+      font-weight: 900;
+      font-size: 30px;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      color: #fff;
+      opacity: 0; }
+      #projects .project .project_image_gigPlay .box-info:hover {
+        opacity: 1; }
+  #projects .project .project_image_attorneyGap {
+    background-image: url("../images/attorneyGap1.png");
+    height: 11em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    -webkit-transition: background-size 0.275s ease-in-out;
+    transition: background-size 0.275s ease-in-out;
+    flex-grow: 1;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.2em solid #1D2F3E; }
+    #projects .project .project_image_attorneyGap:hover {
+      background-size: 115%; }
+    #projects .project .project_image_attorneyGap .box-info {
+      background: rgba(35, 35, 35, 0.7);
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      -webkit-transition: opacity 0.45s ease-in-out;
+      transition: opacity 0.45s ease-in-out;
+      text-align: center;
+      padding: 20% 0 0;
+      font-weight: 900;
+      font-size: 30px;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      color: #fff;
+      opacity: 0; }
+      #projects .project .project_image_attorneyGap .box-info:hover {
+        opacity: 1; }
+  #projects .project .project_image_campaignDonors {
+    background-image: url("../images/campaignDonors1.png");
+    height: 11em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    -webkit-transition: background-size 0.275s ease-in-out;
+    transition: background-size 0.275s ease-in-out;
+    flex-grow: 1;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.2em solid #1D2F3E; }
+    #projects .project .project_image_campaignDonors:hover {
+      background-size: 115%; }
+    #projects .project .project_image_campaignDonors .box-info {
+      background: rgba(35, 35, 35, 0.7);
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      -webkit-transition: opacity 0.45s ease-in-out;
+      transition: opacity 0.45s ease-in-out;
+      text-align: center;
+      padding: 20% 0 0;
+      font-weight: 900;
+      font-size: 30px;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      color: #fff;
+      opacity: 0; }
+      #projects .project .project_image_campaignDonors .box-info:hover {
+        opacity: 1; }
 
 #contact {
   margin-bottom: 3em; }
