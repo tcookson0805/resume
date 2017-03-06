@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	
+	// fading in hero content
+	$('#hero').fadeTo(2000, 1);
+
 	// scrolling
 	$('body').on('click', '.nav-link', function(event) {
 		if(this.hash !== ''){
@@ -43,7 +46,7 @@ $(document).ready(function() {
 	})
 
 	// slides side menu in and out
-	$('#main').on('click', '.menu_small', function() {
+	$('#main').on('click', '#nav-icon1', function() {
 		
 		if($('#menu').is(':visible')){
 			$('#hero').animate({'margin-left': '0'});		
@@ -55,6 +58,11 @@ $(document).ready(function() {
 
 	});
 
+	
+
+	$('#nav-icon1').click(function(){
+		$(this).toggleClass('open');
+	});
 
 
 
