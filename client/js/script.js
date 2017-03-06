@@ -21,14 +21,12 @@ $(document).ready(function() {
 		}
 	});
 
-
+	// message form
 	$('.form_submit').on('click', 'button', function(event) {
-
 		var name = $('#sender_name').val();
 		var email = $('#sender_email').val();
 		var subject = $('#sender_name').val() + ' via tylercookson.com';
 		var message = $('#sender_message').val();
-		// console.log('clicked');
 
 		$.get('/send', {
 			name: name,
@@ -42,10 +40,41 @@ $(document).ready(function() {
 				console.log('failure')
 			}
 		});
-
-
-		
 	})
+
+	// slides side menu in and out
+	$('#main').on('click', '.menu_small', function() {
+		
+		if($('#menu').is(':visible')){
+			$('#hero').animate({'margin-left': '0'});		
+			$('#menu').hide()
+		} else {
+			$('#hero').animate({'margin-left': '20%'});		
+			$('#menu').show(400);
+		}
+
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })
+

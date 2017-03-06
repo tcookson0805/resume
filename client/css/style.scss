@@ -6,21 +6,26 @@ $break-small: 576px;
 $break-medium: 768px;
 $break-large: 992px;
 $break-xlarge: 1200px;
+$darkBlue: #1D2F3E;
+$lightBlue: #65A3D6;
+$lightGray: #9297A6;
 
 @mixin links {
 	a {
 		color: white;
 		&:hover {
-			color: white;
+			color: $lightBlue;
 		}
 	}
 }
 
 @mixin sectionHeader {
 	font-weight: bold;
-	font-size: 3em;
-	color: #1D2F3E;
-	margin-bottom: 0.5em;
+	font-size: 2em;
+	color: $darkBlue;
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	text-align: center;
 }
 
 html, body {
@@ -28,22 +33,35 @@ html, body {
 	font-family: $mainFont;
 }
 
+.section_break {
+	border-bottom: 0.1em solid $lightGray;
+	height: 5em;
+	padding: 0 !important;
+	margin: 0 !important;
+
+}
+
 #menu {
 	position: fixed;
 	height: 100%;
 	width: 20%;
-	background-color: #1D2F3E;
+	background-color: $darkBlue;
 	text-align: center;
 	color: white;
 	@media screen and (max-width: $break-large) {
 		display: none;
 	}
 	.menu_content {
-		margin: 4em auto;
-
+		// margin: 4em auto;
+		-webkit-transform: translateY(45%);
+		-ms-transform: translateY(45%);
+		transform: translateY(45%);
 		#menu_links {
-			font-family: $secondFont;
-			font-size: 1.5em;
+			font-size: 25px;
+			// letter-spacing: 0.1em;
+			.nav-link {
+				margin: 0.5em auto;
+			}
 			@include links;
 		}
 	}
@@ -52,7 +70,7 @@ html, body {
 #hero {
 	margin-left: 20%;
 	overflow-y: scroll;
-	position: relative;
+	position: absolute;
 	@media screen and (max-width: $break-large) {
 		margin-left: 0;
 	}
@@ -65,18 +83,39 @@ html, body {
 	@media screen and (max-width: $break-medium) {
 		height: 75vh;
 	}
+	.menu_small {
+		border: 0.1em solid black;
+		cursor: pointer;
+		margin-top: 1em;
+		padding: 0;
+		height: 3em;
+		border-radius: 0.5em;
+		width: 3em;
+		background-color: $darkBlue;
+		display: none;
+		@media screen and (max-width: $break-large) {
+			display: block;
+		}
+		.menu_small_line {
+			border-bottom: 0.15em solid white;
+			margin: 0.6em 0.5em;
+		}	
+	}
 	.main_content {
 		position: relative;
-		top: 30%;
-		-webkit-transform: translateY(-30%);
-		-ms-transform: translateY(-30%);
-		transform: translateY(-30%);
-
+		// top: 30%;
+		-webkit-transform: translateY(50%);
+		-ms-transform: translateY(50%);
+		transform: translateY(50%);
+		@media screen and (max-width: $break-large) {
+			-webkit-transform: translateY(0%);
+			-ms-transform: translateY(0%);
+			transform: translateY(0%);
+		}
 		.main_header {
 			font-weight: bold;
-			margin-bottom: 0.5em;
 			font-size: 4.75em;
-			color: #1D2F3E;
+			color: $darkBlue;
 			@media screen and (max-width: $break-medium) {
 				font-size: 4em;
 			}
@@ -85,16 +124,19 @@ html, body {
 			}
 		}
 		.main_middle {
-			font-size: 2em;
+			font-size: 25px;
 			@media screen and (max-width: $break-small) {
 				font-size: 1.5em;
 			}
 		}
 		.main_links a {
 			font-size: 3em;
-			color: black;
+			color: $darkBlue;
 			margin: 0.5em;
 			text-decoration: none;
+			&:hover {
+				color: $lightBlue;
+			}
 		}
 	}
 }
@@ -125,7 +167,7 @@ html, body {
 		@include sectionHeader;
 	}
 	.aboutMe_left {
-
+		font-family: $secondFont;
 	}
 	.aboutMe_tools_header {
 		text-align: center;
@@ -139,6 +181,7 @@ html, body {
 		text-align: center;
 		.tool {
 			margin: auto 0.5em;
+			color: $lightGray;
 			@media screen and (max-width: $break-medium) {
 				float: left;
 			}
@@ -153,18 +196,24 @@ html, body {
 	}
 	.project {
 		margin-bottom: 5em;
+		color: $darkBlue;
 		.project_title {
-			font-weight: bold;
-			font-size: 2em;
+			// font-weight: bold;
+			font-size: 1.5em;
+			color: $lightBlue;
+			.project_demo {
+				margin-left: 1em;
+			}
 		}
 		.project_info {
 			font-family: $secondFont;
 			margin: 1em auto;
 		}
 		.project_techs {
+			color: $lightGray;
 			@media screen and (max-width: $break-medium) {
 				float: left;
-				width: 60%;
+				width: 100%;
 			}
 		}
 		.project_links {
@@ -174,31 +223,24 @@ html, body {
 				width: 40%;
 				margin: auto;
 			}
-			.project_link {
-				background-color: #1D2F3E;
-				text-align: center;
-				color: white; 
-				float: left;
-				padding: 0.5em;
-				border: 0.1em solid black;
-				margin-right: 0.5em;
-				width: 6em;
-			}
 		}
 		.project_image  {
+			overflow: auto;
+			color: $darkBlue;
 			img {
-				border: 0.2em solid #979797;
+				margin-top: 1em;
+				border: 0.2em solid $darkBlue;
 				width: 100%;
 				position: relative;
-				top: 55%;
-				-webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				transform: translateY(-50%);
 				@media screen and (max-width: $break-medium) {
-					width: 80%;
-					margin-left: 10%;
-					margin-top: 0.75em;
+					margin-top: 1.5em;
 				}
+			}
+			.project_demo {
+				text-align: center;
+				background-color: $lightGray;
+				border: 0.2em solid $darkBlue;
+				border-top: none;
 			}
 		}	
 	}
@@ -211,7 +253,8 @@ html, body {
 	}
 	.contact_info {
 		font-size: 1em;
-		text-align: center;
+		text-align: left;
+		color: $lightGray;
 	}
 	#contact_form {
 		// display: none;
@@ -223,7 +266,7 @@ html, body {
 	display: block;
 	.form_div {
 		position: relative;
-		max-height: 150px;
+		// max-height: 150px;
 		margin-bottom: 1.25em;
 		.form_input {
 			width: 100%;
@@ -246,7 +289,7 @@ html, body {
 			height: 2em;
 			border: 0.1em solid black;
 			text-align: center;
-			background-color: black;
+			background-color: $darkBlue;
 			i {
 				font-size: 1.5em;
 				color: white;
@@ -258,14 +301,17 @@ html, body {
 		.form_submit {
 			overflow: auto;
 			button {
-				float: right;
+				float: left;
 				margin-top: 1em;
 				color: white;
-				background-color: black;
+				background-color: $darkBlue;
 				border: none;
 				padding: 0.25em;
 				width: 7.5em;
 				cursor: pointer;
+				&:hover {
+					background-color: $lightBlue;
+				}
 			}	
 		}
 	}
