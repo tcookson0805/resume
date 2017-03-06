@@ -55,9 +55,14 @@ $campaignDonors: url('../images/AttorneyGap_Main.png');
 		height: 20em;
 		width: 100%
 	}
-	@media screen and (max-width: $break-medium) {
+	@media screen and (max-width: $break-small) {
 		margin: 1em auto;
-		height: 20em;
+		height: 15em;
+		width: 100%
+	}
+	@media screen and (max-width: $break-xsmall) {
+		margin: 1em auto;
+		height: 10em;
 		width: 100%
 	}
 	.box-info {

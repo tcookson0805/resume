@@ -259,10 +259,15 @@ html, body {
         margin: 1em auto;
         height: 20em;
         width: 100%; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
       #projects .project .project_image_gigPlay {
         margin: 1em auto;
-        height: 20em;
+        height: 15em;
+        width: 100%; } }
+    @media screen and (max-width: 320px) {
+      #projects .project .project_image_gigPlay {
+        margin: 1em auto;
+        height: 10em;
         width: 100%; } }
     #projects .project .project_image_gigPlay .box-info {
       background: rgba(35, 35, 35, 0.7);
@@ -305,10 +310,15 @@ html, body {
         margin: 1em auto;
         height: 20em;
         width: 100%; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
       #projects .project .project_image_attorneyGap {
         margin: 1em auto;
-        height: 20em;
+        height: 15em;
+        width: 100%; } }
+    @media screen and (max-width: 320px) {
+      #projects .project .project_image_attorneyGap {
+        margin: 1em auto;
+        height: 10em;
         width: 100%; } }
     #projects .project .project_image_attorneyGap .box-info {
       background: rgba(35, 35, 35, 0.7);
@@ -351,10 +361,15 @@ html, body {
         margin: 1em auto;
         height: 20em;
         width: 100%; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
       #projects .project .project_image_campaignDonors {
         margin: 1em auto;
-        height: 20em;
+        height: 15em;
+        width: 100%; } }
+    @media screen and (max-width: 320px) {
+      #projects .project .project_image_campaignDonors {
+        margin: 1em auto;
+        height: 10em;
         width: 100%; } }
     #projects .project .project_image_campaignDonors .box-info {
       background: rgba(35, 35, 35, 0.7);
