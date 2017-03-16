@@ -8,9 +8,11 @@ html, body {
     .section_break {
       height: 3em; } }
 
-.inlineLink:hover {
-  color: #65A3D6;
-  text-decoration: none; }
+.inlineLink {
+  color: #65A3D6; }
+  .inlineLink:hover {
+    color: #1D2F3E;
+    text-decoration: none; }
 
 #nav-icon1 {
   display: none;

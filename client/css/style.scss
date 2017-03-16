@@ -105,8 +105,9 @@ html, body {
 }
 
 .inlineLink {
+	color: $lightBlue;
 	&:hover {
-		color: $lightBlue;
+		color: $darkBlue;
 		text-decoration: none;
 	}
 }
