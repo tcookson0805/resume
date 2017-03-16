@@ -24,27 +24,6 @@ $(document).ready(function() {
 		})
 	})
 
-	// message form
-	$('.form_submit').on('click', 'button', function(event) {
-		var name = $('#sender_name').val();
-		var email = $('#sender_email').val();
-		var subject = $('#sender_name').val() + ' via tylercookson.com';
-		var message = $('#sender_message').val();
-
-		$.get('/send', {
-			name: name,
-			email: email,
-			subject: subject,
-			message: message
-		}, function(data) {
-			console.log(data);
-			if(data == 'sent') {
-				console.log('sent!!!')
-			} else {
-				console.log('failure')
-			}
-		});
-	})
 
 	// slides side menu in and out
 	$('#main').on('click', '#nav-icon1', function() {

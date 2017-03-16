@@ -415,7 +415,17 @@ html, body {
 	.contact_header {
 		@include sectionHeader;
 	}
-	#contact_form {
+	.contact_item {
+		text-align: center;
+		margin-bottom: 0.5em;
+		color: $lightBlue;
+		a {
+			color: $lightBlue;
+			&:hover {
+				text-decoration: none;
+				color: $darkBlue;
+			}
+		}
 	}
 }
 
