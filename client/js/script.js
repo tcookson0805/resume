@@ -37,6 +37,7 @@ $(document).ready(function() {
 			subject: subject,
 			message: message
 		}, function(data) {
+			console.log(data);
 			if(data == 'sent') {
 				console.log('sent!!!')
 			} else {
